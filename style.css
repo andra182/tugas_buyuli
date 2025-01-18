@@ -209,7 +209,7 @@ label {
   align-items: center;
 }
 
-button {
+.buttonBayar {
   position: relative;
   display: flex;
   justify-content: center;
@@ -226,7 +226,7 @@ button {
   align-self: center;
 }
 
-button:after {
+.buttonBayar:after {
   content: " ";
   width: 0%;
   height: 100%;
@@ -236,13 +236,13 @@ button:after {
   right: 0;
 }
 
-button:hover::after {
+.buttonBayar:hover::after {
   right: auto;
   left: 0;
   width: 100%;
 }
 
-button span {
+.buttonBayar span {
   text-align: center;
   text-decoration: none;
   width: 100%;
@@ -255,7 +255,7 @@ button span {
   transition: all 0.3s ease-in-out;
 }
 
-button:hover span {
+.buttonBayar:hover span {
   color: #f8f9fa;
   animation: scaleUp 0.3s ease-in-out;
 }
@@ -282,4 +282,104 @@ button:hover span {
 .cart-img {
   position: absolute;
   right: -20%;
+}
+.detail {
+  width: 30%;
+  height: 70%;
+  background: #1e1e1e;
+  border-radius: 10px;
+  display: flex;
+}
+
+.sect_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 38px;
+  gap: 40px;
+}
+
+.sect_container p {
+  margin-bottom: 40px;
+}
+
+.detail_transaksi {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail_segment {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.basic {
+  color: #4c4c4c !important;
+}
+
+.detail_title {
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin: 0;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.detail_number {
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #c5c5c5;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin: 0;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.diskon_pembelian {
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.membership_point {
+  margin-top: 20px;
+}
+
+.done_button {
+  margin-bottom: 20px;
+}
+
+.feedback-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.feedback-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  background-color: #c5c5c5;
+  border-radius: 10px;
+}
+
+.feedback-option img {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.feedback-option span {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
 }
