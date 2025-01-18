@@ -49,10 +49,9 @@
 .sect1 {
   width: 40%;
   padding: 4%;
-}
-
-.sect2 {
-  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .judul_title {
@@ -76,9 +75,18 @@
 .input_payment {
   display: flex;
   align-items: center;
-  height: 70%;
+  height: 80%;
   padding: 0 3rem;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 40px;
+  justify-content: space-between;
+}
+
 label {
   font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1rem;
@@ -101,6 +109,8 @@ label {
 
 .prefix {
   position: absolute;
+  display: flex;
+  gap: 10px;
   left: 12px;
   color: #333;
   font-size: 16px;
@@ -114,18 +124,162 @@ label {
   letter-spacing: 2px;
 }
 
+.prefix p {
+  padding-top: 0.1875em;
+}
+
 #jumlah_pembelian {
   width: 100%;
   padding: 12px;
-  padding-left: 45px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding-left: 85px;
+  border: 1px solid #9f9f9f;
+  border-radius: 8px;
   color: white;
   font-size: 16px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #1e1e1e;
 }
 
 #jumlah_pembelian:focus {
   outline: none;
   border-color: #2196f3;
+}
+
+#pilih_membership {
+  width: 100%;
+  padding: 12px;
+  padding-left: 45px;
+  border: 1px solid #9f9f9f;
+  border-radius: 8px;
+  color: #e3e3e3;
+  font-size: 16px;
+  background-color: #1e1e1e;
+  appearance: none;
+  cursor: pointer;
+}
+
+.membership .input-group {
+  position: relative;
+}
+
+.membership .prefix {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.membership .input-group::after {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: 35%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  rotate: -45deg;
+  pointer-events: none;
+}
+
+#pilih_membership:focus {
+  outline: none;
+  border-color: #2196f3;
+}
+
+#pilih_membership option {
+  background-color: #000000;
+  color: white;
+  padding: 12px;
+}
+
+.membership {
+  margin-top: 20px;
+}
+
+.membership .prefix svg {
+  margin-top: 2px;
+}
+
+.membership .prefix {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #f8f9fa;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  width: fit-content;
+  margin-top: auto;
+  align-self: center;
+}
+
+button:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #000000;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+button:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+button span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 12px 20px;
+  color: #000000;
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover span {
+  color: #f8f9fa;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.sect2 {
+  width: 60%;
+  position: relative;
+  background: url("./assets/bg_sect2.png") center center / cover no-repeat;
+}
+
+.cart-img {
+  position: absolute;
+  right: -20%;
 }
