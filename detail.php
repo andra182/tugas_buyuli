@@ -91,7 +91,7 @@ if($_POST["membership"] === "basic") {
             </div>
             <div class="total_harga detail_segment">
                 <p class="detail_title">Total Harga</p>
-                <span class="detail_number"> Rp. <?= formatRibuan((diskon($pembelian) + $pembelian)); ?> </span>
+                <span class="detail_number"> Rp. <?= formatRibuan($pembelian - (diskon($pembelian))); ?> </span>
             </div>
           </div>
           <div class="done_button">
